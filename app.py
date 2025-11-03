@@ -39,7 +39,7 @@ with col1:
 with col2:
     st.write("")
     if st.button("Reload memory"):
-        st.experimental_rerun()
+        st.rerun()
 
 st.markdown("---")
 st.subheader("Add memory (quick)")
@@ -51,7 +51,7 @@ with st.form("mem_form", clear_on_submit=True):
         if mem_text.strip():
             add_memory(mem_text.strip(), mem_tag.strip())
             st.success("Memory saved.")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Enter some text to save.")
 
